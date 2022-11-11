@@ -2,14 +2,14 @@ class Solution {
 public:
     bool isPalindrome(int x) {
         int num = x;
-          int reversed = 0;
-        if(x<0)return false;
-            if(num>0){
+          long int reversed = 0;
+        if(x<0 || x>=2147483647)return false;
+            while(num>0){
             int remainder = num%10;
                  reversed = reversed * 10 + remainder;
                 num /= 10;
         }
-        if(x=reversed || x==0){
+        if(x==reversed){
             return true;
         }
         else{
