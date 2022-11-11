@@ -9,7 +9,7 @@ public:
                  reversed = reversed * 10 + remainder;
                 num /= 10;
         }
-        if(x=reversed){
+        if(x=reversed || x==0){
             return true;
         }
         else{
